@@ -1,1 +1,8 @@
 bundle install したものを実行するときはbundle execをつける
+
+# レイアウト崩れを確認する
+bundle exec rubocop --only Layout
+
+bundle exec rubocop --fix-layout
+
+文字列は内部では違うもの
