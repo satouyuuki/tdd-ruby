@@ -1,7 +1,7 @@
 require 'minitest/reporters'
 Minitest::Reporters.use!
 require 'minitest/autorun'
-require './lib/fizz_buzz.rb'
+require './lib/fizz_buzz'
 
 print FizzBuzz.generate_list
 
@@ -38,18 +38,23 @@ class FizzBuzzTest < Minitest::Test
       def setup
         @result = FizzBuzz.generate_list
       end
+
       def test_配列の初めは文字列の1を返す
         assert_equal '1', @result.first
       end
+
       def test_配列の最後は文字列のBuzzを返す
         assert_equal 'Buzz', @result.last
       end
+
       def test_配列の2番目は文字列のFizzを返す
         assert_equal 'Fizz', @result[2]
       end
+
       def test_配列の4番目は文字列のBuzzを返す
         assert_equal 'Buzz', @result[4]
       end
+
       def test_配列の14番目は文字列のFizzBuzzを返す
         assert_equal 'FizzBuzz', @result[14]
       end
@@ -84,19 +89,25 @@ class FizzBuzzTest < Minitest::Test
       result = %w[apple orange pineapple strawberry].map(&:size)
       assert_equal [5, 6, 9, 10], result
     end
+
     def test_配列の中から条件に一致する要素を取得する
       result = %w[apple orange pineapple strawberry].find(&:size)
       assert_equal 'apple', result
     end
+
     def test_配列の中から条件に一致する要素を取得する
       result = %w[apple orange pineapple strawberry].detect(&:size)
       assert_equal 'apple', result
     end
 
     def test_指定した評価式で並び替えた配列を返す
-      assert_equal %w[1 10 13 2 3 4], %w[2 4 13 3 1 10].sort
-      assert_equal %w[1 2 3 4 10 13], %w[2 4 13 3 1 10].sort { |a, b| a.to_i <=> b.to_i }
-      assert_equal %w[13 10 4 3 2 1], %w[2 4 13 3 1 10].sort { |b, a| a.to_i <=> b.to_i }
+      result1 = %w[2 4 13 3 1 10].sort
+      result2 = %w[2 4 13 3 1 10].sort { |a, b| a.to_i <=> b.to_i }
+      result3 = %w[2 4 13 3 1 10].sort { |b, a| a.to_i <=> b.to_i }
+
+      assert_equal %w[1 10 13 2 3 4], result1
+      assert_equal %w[1 2 3 4 10 13], result2
+      assert_equal %w[13 10 4 3 2 1], result3
     end
 
     def test_配列の中から条件に一致する要素を取得する

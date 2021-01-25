@@ -10,15 +10,19 @@ class HelloTest < Minitest::Test
     assert_equal 'Buzz', numToString(5)
     assert_equal 'FizzBuzz', numToString(15)
   end
+
   def test_createOneHundred
     assert_equal [1..100], createOneHundred
   end
+
   def test_stringToPrint
     assert_output('hoge') { stringToPrint('hoge') }
   end
+
   def test_result
     assert_equal 'hogehoge', result
   end
+
   def numToString(num)
     if num % 15 == 0
       'FizzBuzz'
@@ -30,17 +34,20 @@ class HelloTest < Minitest::Test
       num.to_s
     end
   end
+
   def createOneHundred
     [1..100]
   end
+
   def stringToPrint(str)
     print str
   end
+
   def result
     array = createOneHundred
-    array.each{|n| 
+    array.each do |n|
       result = numToString(n)
       stringToPrint(result)
-    }
+    end
   end
 end

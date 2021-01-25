@@ -1,0 +1,1 @@
+bundle install したものを実行するときはbundle execをつける

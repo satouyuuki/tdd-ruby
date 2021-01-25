@@ -38,6 +38,7 @@ class FizzBuzzTest < Minitest::Test
       def setup
         @result = FizzBuzz.generate_list
       end
+
       def test_配列の初めは文字列の1を返す
         # require 'byebug'
         # byebug
@@ -48,19 +49,23 @@ class FizzBuzzTest < Minitest::Test
         # result = FizzBuzz.print_1_to_100
         assert_equal '1', @result.first
       end
+
       # def test_配列の最後は文字列の100を返す
       def test_配列の最後は文字列のBuzzを返す
         # result = FizzBuzz.print_1_to_100
         assert_equal 'Buzz', @result.last
       end
+
       def test_配列の2番目は文字列のFizzを返す
         # result = FizzBuzz.print_1_to_100
         assert_equal 'Fizz', @result[2]
       end
+
       def test_配列の4番目は文字列のBuzzを返す
         # result = FizzBuzz.print_1_to_100
         assert_equal 'Buzz', @result[4]
       end
+
       def test_配列の14番目は文字列のFizzBuzzを返す
         # result = FizzBuzz.print_1_to_100
         assert_equal 'FizzBuzz', @result[14]
@@ -96,10 +101,12 @@ class FizzBuzzTest < Minitest::Test
       result = %w[apple orange pineapple strawberry].map(&:size)
       assert_equal [5, 6, 9, 10], result
     end
+
     def test_配列の中から条件に一致する要素を取得する
       result = %w[apple orange pineapple strawberry].find(&:size)
       assert_equal 'apple', result
     end
+
     def test_配列の中から条件に一致する要素を取得する
       result = %w[apple orange pineapple strawberry].detect(&:size)
       assert_equal 'apple', result
@@ -166,7 +173,7 @@ class FizzBuzz
     # %w[1 2 3]
     # result = []
     # (1..100).each { |n|
-      # result << n.to_s
+    # result << n.to_s
     #   result << generate(n)
     # }
 
