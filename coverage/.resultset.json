@@ -25,5 +25,32 @@
       }
     },
     "timestamp": 1611614453
+  },
+  "Minitest": {
+    "coverage": {
+      "/Users/satouyuuki/Project/Rails/tdd/fizzbuzz/lib/fizz_buzz.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          100,
+          100,
+          null,
+          100,
+          94,
+          67,
+          null,
+          53,
+          null,
+          null,
+          1,
+          null,
+          101,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1611616482
   }
 }
