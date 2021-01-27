@@ -37,28 +37,30 @@ class FizzBuzzTest < Minitest::Test
       end
     end
     describe '1から100までのFizzBuzzの配列を返す' do
-      def setup
-        @result = FizzBuzz.generate_list
-      end
+      describe 'タイプが1の時' do
+        def setup
+          @result = FizzBuzz.generate_list(1)
+        end
 
-      def test_配列の初めは文字列の1を返す
-        assert_equal '1', @result.first
-      end
+        def test_配列の初めは文字列の1を返す
+          assert_equal '1', @result.first
+        end
 
-      def test_配列の最後は文字列のBuzzを返す
-        assert_equal 'Buzz', @result.last
-      end
+        def test_配列の最後は文字列のBuzzを返す
+          assert_equal 'Buzz', @result.last
+        end
 
-      def test_配列の2番目は文字列のFizzを返す
-        assert_equal 'Fizz', @result[2]
-      end
+        def test_配列の2番目は文字列のFizzを返す
+          assert_equal 'Fizz', @result[2]
+        end
 
-      def test_配列の4番目は文字列のBuzzを返す
-        assert_equal 'Buzz', @result[4]
-      end
+        def test_配列の4番目は文字列のBuzzを返す
+          assert_equal 'Buzz', @result[4]
+        end
 
-      def test_配列の14番目は文字列のFizzBuzzを返す
-        assert_equal 'FizzBuzz', @result[14]
+        def test_配列の14番目は文字列のFizzBuzzを返す
+          assert_equal 'FizzBuzz', @result[14]
+        end
       end
     end
   end

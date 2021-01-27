@@ -11,8 +11,8 @@ class FizzBuzz
     number.to_s
   end
 
-  def self.generate_list
+  def self.generate_list(_num)
     # 1から最大値までのFizzBuzz配列を一発で作る
-    (1..MAX_NUMBER).map { |n| generate(n) }
+    (1..MAX_NUMBER).map { |n| generate(n) } if _num == 1
   end
 end
