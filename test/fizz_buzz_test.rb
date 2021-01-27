@@ -63,6 +63,34 @@ class FizzBuzzTest < Minitest::Test
         end
       end
     end
+    describe 'タイプ２の場合' do
+      def setup
+        @fizzbuzz = FizzBuzz
+      end
+      describe '三の倍数の場合' do
+        def test_3を渡したら文字列Fizzを返す
+          assert_equal 'Fizz', @fizzbuzz.generate(3)
+        end
+      end
+
+      describe '五の倍数の場合' do
+        def test_5を渡したら文字列Buzzを返す
+          assert_equal 'Buzz', @fizzbuzz.generate(5)
+        end
+      end
+
+      describe '三と五の倍数の場合' do
+        def test_15を渡したら文字列FizzBuzzを返す
+          assert_equal 'FizzBuzz', @fizzbuzz.generate(15)
+        end
+      end
+
+      describe 'その他の場合' do
+        def test_1を渡したら文字列1を返す
+          assert_equal '1', @fizzbuzz.generate(1, 2)
+        end
+      end
+    end
   end
 
   describe '配列や繰り返し処理を理解する' do

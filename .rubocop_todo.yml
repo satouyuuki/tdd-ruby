@@ -14,12 +14,20 @@ AllCops:
 # Configuration parameters: CountComments, CountAsOne, ExcludedMethods, IgnoredMethods.
 # IgnoredMethods: refine
 Metrics/BlockLength:
-  Max: 58
-
+  Max: 62
+  Exclude:
+    - "test/fizz_buzz_test.rb"
 # Offense count: 1
 # Configuration parameters: CountComments, CountAsOne.
 Metrics/ClassLength:
   Max: 105
+  Exclude:
+    - "test/fizz_buzz_test.rb"
+Metrics/MethodLength:
+  Max: 105
+  Exclude:
+    - "test/fizz_buzz_test.rb"
+
 
 # Offense count: 22
 # Configuration parameters: AsciiConstants.
