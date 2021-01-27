@@ -62,6 +62,13 @@ class FizzBuzzTest < Minitest::Test
       end
     end
   end
+  describe 'タイプごとに出力を切り替えることができる' do
+    describe 'タイプ１の場合' do
+      def test_1を渡したら文字列1を返す
+        assert_equal '1', FizzBuzz.generate(1, 1)
+      end
+    end
+  end
 
   describe '配列や繰り返し処理を理解する' do
     def test_繰り返し処理
